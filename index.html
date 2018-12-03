@@ -14,62 +14,196 @@
 		<section>  
 			<h1> Book your flight</h1>
 
-			<form method="post" action="">
+			<form method="get" action="http://google.com">
 			   
-
-
+			<fieldset>
+                
+                <legend>Flight Search</legend>
+     
+            <div class="flight">
+            
+            <label for="return">Return</label>
+            <input type="radio" name="flight" id="return" value="return" />
+            <label for="oneway">One Way</label>
+            <input type="radio" name="flight" id="oneway" value="oneway" />
+            
+			</div>			
+							  
 			
-			<fieldset>
+                <div>
+                    <div class="depatLocations">
 
-				<legend>Flight Search</legend>
+				<label for="departureLocation">From</label>
+				  <input list="depatLocations" name="depatLocations">
+                        <datalist id="depatLocations">
+                        <option value="Dublin">
+                        <option value="Gatwick">
+                        <option value="Heathrow">
+                        <option value="Cork-Shannon">
+                        <option value="Glasgow">
+                        <option value="Belfast">
+                        </datalist>
 
-			<article>
-				<label for="flightType"></label>
-				
-				<input for="return" type="radio" name="flight" value="return"> Return <br>
-				<input for="oneway" type="radio" name="flight" value="oneway"> One Way <br>
-						<br>
-			</article>				  
-			<section>
-What is label for?
-				<label for="departureLocation">Select Your Departure Location</label>
-				<input id="departureLocation" type="text" name="departureLocation" /><br>
+                    </div>
+                    
+			         <div class="arrivalLocation">
+            
+				<label for ="arrivalLocation">To</label>
+				    <input list="arrivalLocations" name="arrivalLocations">
+                        <datalist id="arrivalLocations">
+                        <option value="Gatwick">
+                        <option value="Heathrow">
+                        <option value="Cork-Shannon">
+                        <option value="Glasgow">
+                        <option value="Belfast">
+                        </datalist>
+                     </div>
+                </div>
+            
+            <div>
+                
+                <div class="departDate">
+                    <label for="departDate">Depart</label>
+                    <input id="departDate" type="date" name="departDate" />
+                </div>
 
-			</section>
-			<section>
+                <div class="returnDate">
+                    <label for="returnDate">Return</label>
+                    <input id="returnDate" type="date" name="returnDate" />
+                </div>
+                
+            </div>
+                
+                <div>
+                    <div class="cabinClass">
+                        <label for="cabinClass">Cabin Class</label>
+                        <select name="cabinClass" id="cabinClass">
+                                <option value="first">First Class</option>
+                                <option value="business">Business</option>
+                                <option value="economy">Economy</option>		
+                        </select>
 
-				<label for ="arrivalLocation">Select Your Arrival Location</label>
-				<input id="arrivalLocation" type="text" name="arrivalLocation" /><br>
-			</section>
-			<section>
-				<label for="departDate">Depart</label>
-				<input id="departDate" type="date" name="departDate" /><br>
-			</section>
+                    </div>
 
-				<label for="returnDate">Return</label>
-				<input id="returnDate" type="date" name="returnDate" /><br>
+                    <div>
+                            <label for="travellers">Travellers</label>
+                            <input id="travellers" type="number" name="points" step="1" min="0" />     
+                    </div>
+                
+               </div>
 
-				<label for="cabinClass">Cabin Class</label>
-				<select name="cabinClass" id="cabinClass">
-						<option value="first">First Class</option>
-						<option value="business">Business</option>
-						<option value="economy">Economy</option>		
-				</select>
+                <div>
+                    <label for="submit"></label>
+                    <input type="submit" name="GO" />
+                </div>
 
-				<label for="submit"></label>
-				<input type="submit" name="GO" />
-
-			</fieldset>
-
-			<fieldset>
-
-
-			</fieldset>
-
-		</form>
+                </fieldset>
+		  </form>
 
 		</section>
-	</article>		
+	</article>	
+        
+        <hr>
+        
+        <fieldset>
+            <legend>Select Flight</legend>
+            
+                <div>
+                     <div>
+                    <label for="submit">Flight No.1</label>
+                    <input type="submit" class="select" value="select"/>
+                </div>
+                    
+                     <div>
+                    <label for="submit">Flight No.2</label>
+                    <input type="submit" class="select" value="select"/>
+                </div>
+                    
+                     <div>
+                    <label for="submit">Flight No.3</label>
+                    <input type="submit" class="select" value="select" />
+                </div>
+            
+                </div>
+        
+        
+        </fieldset>
+    <hr>
+        
+         <fieldset>
+            <legend>Select Seat</legend>
+            
+                <div>
+                    
+            
+                </div>
+        
+        
+        </fieldset>
+        
+    <hr>
+        
+        
+         <fieldset>
+            <legend>Checked Baggage</legend>
+            
+            <div>
+          
+             <h3>Dublin to London</h3>
+             
+            </div>
+             
+            <div class="baggage">
+                <label for="none">No bags</label>
+                <input type="radio" name="baggage" id="none" value="none" />
+
+                <label for="15kg">15kg</label>
+                <input type="radio" name="baggage" id="15kg" value="15kg" />
+             </div>
+             
+             <div>
+                 <p>Subtotal:</p>
+             
+             </div>
+        
+        </fieldset> 
+        
+        <hr>
+        
+          <fieldset>
+            <legend>Priority Boarding</legend>
+            
+            <div>
+                <h3>Priority Boarding</h3>
+                
+                    <div class="pbdepart">
+                        <p>Departing Dublin - Economy</p>
+                            <div>
+                                <label for="submit"></label>
+                                <input type="submit" class="select" value="select" />
+                            </div>
+
+                    </div>
+                      <div class="pbreturn">
+                        <p>Departing London - Economy</p>
+                            <div>
+                                <label for="submit"></label>
+                                <input type="submit" class="select" value="select" />
+                            </div>
+
+                    </div>
+                    
+            
+                </div>
+        
+        
+            </fieldset>                      
+        
+        
+        
+        
+        
+        
 	</body>
  </html>
 
